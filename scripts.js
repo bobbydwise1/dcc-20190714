@@ -26,8 +26,14 @@ console.log('startArray = ',startArray);
 const productOfNonIndex = (yourArray) => {
   console.log(yourArray);
   var outputArray = [];
-  if (yourArray.length===1) {return yourArray;}
-  if (yourArray.length===2) {return [yourArray[1], yourArray[0]]}
+  switch (yourArray.length) {
+  case 1:
+    return yourArray;
+    break;
+  case 2:
+    return [yourArray[1], yourArray[0]];
+    break;
+  default:
   for (i=0; i<yourArray.length; i++) {
     var tempIndexProduct = 1;
     for (j=0; j<yourArray.length; j++) {
@@ -39,6 +45,7 @@ const productOfNonIndex = (yourArray) => {
     outputArray.push(tempIndexProduct);
     }
   return outputArray;
+  }
 }
 
 answerArray = productOfNonIndex(startArray);
