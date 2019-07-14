@@ -47,5 +47,4 @@ console.log('answerArray =', answerArray);
 $(document).ready(function() {
   $('#output-section-1').text(startArray);
   $('#output-section-2').text(answerArray);
-  //$('#output-section-3').text(tops[0]+tops[1]);
   });
