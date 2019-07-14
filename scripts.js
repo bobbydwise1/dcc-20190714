@@ -26,7 +26,7 @@ console.log('startArray = ',startArray);
 const productOfNonIndex = (yourArray) => {
   console.log(yourArray);
   var outputArray = [];
-  if (yourArray.length===1) {console.log('made it here1');return yourArray;}
+  if (yourArray.length===1) {return yourArray;}
   if (yourArray.length===2) {return [yourArray[1], yourArray[0]]}
   for (i=0; i<yourArray.length; i++) {
     var tempIndexProduct = 1;
