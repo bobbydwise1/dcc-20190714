@@ -27,24 +27,24 @@ const productOfNonIndex = (yourArray) => {
   console.log(yourArray);
   var outputArray = [];
   switch (yourArray.length) {
-  case 1:
-    return yourArray;
-    break;
-  case 2:
-    return [yourArray[1], yourArray[0]];
-    break;
-  default:
-  for (i=0; i<yourArray.length; i++) {
-    var tempIndexProduct = 1;
-    for (j=0; j<yourArray.length; j++) {
-      if ( j === i ) {
-        continue;
+    case 1:
+      return yourArray;
+      break;
+    case 2:
+      return [yourArray[1], yourArray[0]];
+      break;
+    default:
+    for (i=0; i<yourArray.length; i++) {
+      var tempIndexProduct = 1;
+      for (j=0; j<yourArray.length; j++) {
+        if ( j === i ) {
+          continue;
+        }
+        tempIndexProduct = tempIndexProduct*yourArray[j];
       }
-      tempIndexProduct = tempIndexProduct*yourArray[j];
-    }
-    outputArray.push(tempIndexProduct);
-    }
-  return outputArray;
+      outputArray.push(tempIndexProduct);
+      }
+    return outputArray;
   }
 }
 
