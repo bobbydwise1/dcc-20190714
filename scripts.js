@@ -21,17 +21,20 @@ const randomArray = (yourArrayLength) => {
 }
 
 startArray = randomArray(makeRandomNumOne2Ten());
-console.log('startArray = ';startArray);
+console.log('startArray = ',startArray);
 
 const productOfNonIndex = (yourArray) => {
+  console.log(yourArray);
   var outputArray = [];
+  if (yourArray.length===1) {console.log('made it here1');return yourArray;}
+  if (yourArray.length===2) {return [yourArray[1], yourArray[0]]}
   for (i=0; i<yourArray.length; i++) {
     var tempIndexProduct = 1;
     for (j=0; j<yourArray.length; j++) {
       if ( j === i ) {
         continue;
       }
-      tempIndexProduct = tempIndexProduct*yourArray[i];
+      tempIndexProduct = tempIndexProduct*yourArray[j];
     }
     outputArray.push(tempIndexProduct);
     }
@@ -39,7 +42,7 @@ const productOfNonIndex = (yourArray) => {
 }
 
 answerArray = productOfNonIndex(startArray);
-console.log('answerArray =', answerArray;);
+console.log('answerArray =', answerArray);
 
 $(document).ready(function() {
   $('#output-section-1').text(startArray);
